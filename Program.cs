@@ -56,6 +56,12 @@
 
             var RatingAverage = games.Average(game => game.Rating);
             Console.WriteLine("The average rating of all games is: " + RatingAverage);
+
+            var maxrating = games.Max(game => game.Rating);
+            Console.WriteLine("The highest rating of all games is: " + maxrating);
+
+
+
         }
     }
     
