@@ -99,18 +99,23 @@
             //}
 
 
-            var budgetforgame = games
-            .Where(g => g.Price <= 300 && g.Genre == "RPG")
-            .OrderByDescending(g => g.Rating)
-            .Select(g => $"The titel is {g.Title} and pris {g.Price} Rating for this is {g.Rating} and it realsed year: {g.ReleaseYear}");
+            //var budgetforgame = games
+            //.Where(g => g.Price <= 300 && g.Genre == "RPG")
+            //.OrderByDescending(g => g.Rating)
+            //.Select(g => $"The titel is {g.Title} and pris {g.Price} Rating for this is {g.Rating} and it realsed year: {g.ReleaseYear}");
 
-            foreach (var game in budgetforgame)
+            //foreach (var game in budgetforgame)
+            //{
+            //    Console.WriteLine(game);
+            //}
+
+            var pagination = games.Skip(3).Take(5);
+            foreach (var game in pagination)
             {
-                Console.WriteLine(game);
+                Console.WriteLine($"{game.Title} - {game.ReleaseYear}");
             }
 
         }
     }
-    
 }
 
