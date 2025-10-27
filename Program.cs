@@ -48,11 +48,14 @@
             //    Console.WriteLine($"{game.Title} - {game.ReleaseYear}");
             //}
 
-            var SortedGames = games.OrderByDescending(game => game.ReleaseYear);
-            foreach (var game in SortedGames)
-            {
-                Console.WriteLine($"{game.Title} - {game.ReleaseYear}");
-            }
+            //var SortedGames = games.OrderByDescending(game => game.ReleaseYear);
+            //foreach (var game in SortedGames)
+            //{
+            //    Console.WriteLine($"{game.Title} - {game.ReleaseYear}");
+            //}
+
+            var RatingAverage = games.Average(game => game.Rating);
+            Console.WriteLine("The average rating of all games is: " + RatingAverage);
         }
     }
     
