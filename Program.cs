@@ -109,12 +109,16 @@
             //    Console.WriteLine(game);
             //}
 
-            var pagination = games.Skip(3).Take(5);
-            foreach (var game in pagination)
-            {
-                Console.WriteLine($"{game.Title} - {game.ReleaseYear}");
-            }
+            //var pagination = games.Skip(3).Take(5);
+            //foreach (var game in pagination)
+            //{
+            //    Console.WriteLine($"{game.Title} - {game.ReleaseYear}");
+            //}
 
+            var cheapestgame = games
+                .OrderBy(g => g.Price)
+                .First();
+            Console.WriteLine($"The cheapest game is {cheapestgame.Title} with a price of {cheapestgame.Price} SEK.");
         }
     }
 }
