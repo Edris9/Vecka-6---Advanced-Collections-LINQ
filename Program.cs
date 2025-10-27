@@ -42,7 +42,13 @@
             //    Console.WriteLine("There are no modern games in the list.");
             //}
 
-            var SortedGames = games.OrderBy(game => game.ReleaseYear);
+            //var SortedGames = games.OrderBy(game => game.ReleaseYear);
+            //foreach (var game in SortedGames)
+            //{
+            //    Console.WriteLine($"{game.Title} - {game.ReleaseYear}");
+            //}
+
+            var SortedGames = games.OrderByDescending(game => game.ReleaseYear);
             foreach (var game in SortedGames)
             {
                 Console.WriteLine($"{game.Title} - {game.ReleaseYear}");
