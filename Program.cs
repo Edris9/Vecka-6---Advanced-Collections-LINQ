@@ -60,6 +60,12 @@
             var maxrating = games.Max(game => game.Rating);
             Console.WriteLine("The highest rating of all games is: " + maxrating);
 
+            var lowrating = games.Min(game => game.Rating);
+            Console.WriteLine("The lowest rating of all games is: " + lowrating);
+
+            var bestgame = games.First(game => game.Rating == maxrating);
+            Console.WriteLine("The best rated game is: " + bestgame.Title + "with rating: " + bestgame.Rating);
+
 
 
         }
