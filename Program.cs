@@ -86,16 +86,27 @@
             //var bestgame = games.First(game => game.Rating == maxrating);
             //Console.WriteLine("The best rated game is: " + bestgame.Title + "with rating: " + bestgame.Rating);
 
-            var GruppedGames = games.GroupBy(game => game.Genre);
-            foreach (var group in GruppedGames)
+            //var GruppedGames = games.GroupBy(game => game.Genre);
+            //foreach (var group in GruppedGames)
+            //{
+            //    Console.WriteLine($"Genre: { group.Key}");
+
+            //    foreach(var game in group)
+            //    {
+            //    Console.WriteLine($" - {game.Title} ({game.ReleaseYear}) Rating: {game.Rating}");
+
+            //    }
+            //}
+
+
+            var budgetforgame = games
+            .Where(g => g.Price <= 300 && g.Genre == "RPG")
+            .OrderByDescending(g => g.Rating)
+            .Select(g => $"The titel is {g.Title} and pris {g.Price} Rating for this is {g.Rating} and it realsed year: {g.ReleaseYear}");
+
+            foreach (var game in budgetforgame)
             {
-                Console.WriteLine($"Genre: { group.Key}");
-
-                foreach(var game in group)
-                {
-                Console.WriteLine($" - {game.Title} ({game.ReleaseYear}) Rating: {game.Rating}");
-
-                }
+                Console.WriteLine(game);
             }
 
         }
