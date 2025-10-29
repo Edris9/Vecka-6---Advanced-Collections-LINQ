@@ -1,4 +1,6 @@
 ﻿namespace Vecka_6___Advanced_Collections___LINQ;
+
+using System.Reflection.Metadata;
 using System.Text.Json;
 
     internal class Program
@@ -139,28 +141,56 @@ using System.Text.Json;
 
 
         // reserve metod in list
-        List<string> sampleList = new List<string>
-        {
-            "Apple",
-            "Banana",
-            "Cherry",
-            "Date",
-            "Elderberry"
-        };
+        //List<string> sampleList = new List<string>
+        //{
+        //    "Apple",
+        //    "Banana",
+        //    "Cherry",
+        //    "Date",
+        //    "Elderberry"
+        //};
 
-        Console.WriteLine("Original List:");
-        foreach (var item in sampleList)
-        {
-            Console.WriteLine(item);
-        }
+        //Console.WriteLine("Original List:");
+        //foreach (var item in sampleList)
+        //{
+        //    Console.WriteLine(item);
+        //}
 
-        Console.WriteLine("Thsi is reversed list:");
-        sampleList.Reverse();
+        //Console.WriteLine("Thsi is reversed list:");
+        //sampleList.Reverse();
 
-        foreach (var item in sampleList)
-        {
-            Console.WriteLine(item);
-        }
+        //foreach (var item in sampleList)
+        //{
+        //    Console.WriteLine(item);
+        //}
+
+        // Distinct metod in list
+        //List<string> sampleList = new List<string>
+        //{
+        //    "Apple",
+        //    "Banana",
+        //    "Cherry",
+        //    "Date",
+        //    "Elderberry"
+        //};
+
+        //Console.WriteLine("add your favorite fruit:");
+        //string userInput = Console.ReadLine();
+        //sampleList.Add(userInput);
+        //if (sampleList.Distinct().Count() != sampleList.Count)
+        //{
+        //    Console.WriteLine("This fruit is already in the list.");
+        //    sampleList.Remove(userInput);
+        //}
+        //else
+        //{
+        //    Console.WriteLine("Fruit added to the list.");
+        //    foreach (var item in sampleList)
+        //    {
+        //        Console.WriteLine(item);
+        //    }
+
+        //}
 
 
     }
