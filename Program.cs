@@ -1,10 +1,11 @@
-﻿namespace Vecka_6___Advanced_Collections___LINQ
-{
+﻿namespace Vecka_6___Advanced_Collections___LINQ;
+using System.Text.Json;
+
     internal class Program
     {
-        static void Main(string[] args)
-        {
-            var games = new List<Game>
+    static void Main(string[] args)
+    {
+        var games = new List<Game>
                 {
                     new Game { Title = "The Last of Us Part II", Genre = "Action-Adventure", ReleaseYear = 2020, Rating = 9.3, Price = 499 },
                     new Game { Title = "Cyberpunk 2077", Genre = "RPG", ReleaseYear = 2020, Rating = 8.1, Price = 399 },
@@ -39,87 +40,129 @@
                 };
 
 
-            //var allgames = games.Select(game => game.Title);
+        //var allgames = games.Select(game => game.Title);
 
-            //var rpggames = games.Where(game => game.Genre == "RPG");
-            //foreach (var game in rpggames)
-            //{
-            //    Console.WriteLine(game.Title);
-            //}
+        //var rpggames = games.Where(game => game.Genre == "RPG");
+        //foreach (var game in rpggames)
+        //{
+        //    Console.WriteLine(game.Title);
+        //}
 
-            //var moderngame = games.Any(games => games.ReleaseYear > 2050);
-            //Console.WriteLine("There are modern games in the list." + moderngame);
-            //if (moderngame == true)
-            //{
-            //    Console.WriteLine("There are modern games in the list.");
-            //    foreach (var game in games)
-            //    {
-            //        Console.WriteLine($"{game.Title} - {game.ReleaseYear}");
-            //    }
-            //}
-            //else
-            //{
-            //    Console.WriteLine("There are no modern games in the list.");
-            //}
+        //var moderngame = games.Any(games => games.ReleaseYear > 2050);
+        //Console.WriteLine("There are modern games in the list." + moderngame);
+        //if (moderngame == true)
+        //{
+        //    Console.WriteLine("There are modern games in the list.");
+        //    foreach (var game in games)
+        //    {
+        //        Console.WriteLine($"{game.Title} - {game.ReleaseYear}");
+        //    }
+        //}
+        //else
+        //{
+        //    Console.WriteLine("There are no modern games in the list.");
+        //}
 
-            //var SortedGames = games.OrderBy(game => game.ReleaseYear);
-            //foreach (var game in SortedGames)
-            //{
-            //    Console.WriteLine($"{game.Title} - {game.ReleaseYear}");
-            //}
+        //var SortedGames = games.OrderBy(game => game.ReleaseYear);
+        //foreach (var game in SortedGames)
+        //{
+        //    Console.WriteLine($"{game.Title} - {game.ReleaseYear}");
+        //}
 
-            //var SortedGames = games.OrderByDescending(game => game.ReleaseYear);
-            //foreach (var game in SortedGames)
-            //{
-            //    Console.WriteLine($"{game.Title} - {game.ReleaseYear}");
-            //}
+        //var SortedGames = games.OrderByDescending(game => game.ReleaseYear);
+        //foreach (var game in SortedGames)
+        //{
+        //    Console.WriteLine($"{game.Title} - {game.ReleaseYear}");
+        //}
 
-            //var RatingAverage = games.Average(game => game.Rating);
-            //Console.WriteLine("The average rating of all games is: " + RatingAverage);
+        //var RatingAverage = games.Average(game => game.Rating);
+        //Console.WriteLine("The average rating of all games is: " + RatingAverage);
 
-            //var maxrating = games.Max(game => game.Rating);
-            //Console.WriteLine("The highest rating of all games is: " + maxrating);
+        //var maxrating = games.Max(game => game.Rating);
+        //Console.WriteLine("The highest rating of all games is: " + maxrating);
 
-            //var lowrating = games.Min(game => game.Rating);
-            //Console.WriteLine("The lowest rating of all games is: " + lowrating);
+        //var lowrating = games.Min(game => game.Rating);
+        //Console.WriteLine("The lowest rating of all games is: " + lowrating);
 
-            //var bestgame = games.First(game => game.Rating == maxrating);
-            //Console.WriteLine("The best rated game is: " + bestgame.Title + "with rating: " + bestgame.Rating);
+        //var bestgame = games.First(game => game.Rating == maxrating);
+        //Console.WriteLine("The best rated game is: " + bestgame.Title + "with rating: " + bestgame.Rating);
 
-            //var GruppedGames = games.GroupBy(game => game.Genre);
-            //foreach (var group in GruppedGames)
-            //{
-            //    Console.WriteLine($"Genre: { group.Key}");
+        //var GruppedGames = games.GroupBy(game => game.Genre);
+        //foreach (var group in GruppedGames)
+        //{
+        //    Console.WriteLine($"Genre: { group.Key}");
 
-            //    foreach(var game in group)
-            //    {
-            //    Console.WriteLine($" - {game.Title} ({game.ReleaseYear}) Rating: {game.Rating}");
+        //    foreach(var game in group)
+        //    {
+        //    Console.WriteLine($" - {game.Title} ({game.ReleaseYear}) Rating: {game.Rating}");
 
-            //    }
-            //}
+        //    }
+        //}
 
 
-            //var budgetforgame = games
-            //.Where(g => g.Price <= 300 && g.Genre == "RPG")
-            //.OrderByDescending(g => g.Rating)
-            //.Select(g => $"The titel is {g.Title} and pris {g.Price} Rating for this is {g.Rating} and it realsed year: {g.ReleaseYear}");
+        //var budgetforgame = games
+        //.Where(g => g.Price <= 300 && g.Genre == "RPG")
+        //.OrderByDescending(g => g.Rating)
+        //.Select(g => $"The titel is {g.Title} and pris {g.Price} Rating for this is {g.Rating} and it realsed year: {g.ReleaseYear}");
 
-            //foreach (var game in budgetforgame)
-            //{
-            //    Console.WriteLine(game);
-            //}
+        //foreach (var game in budgetforgame)
+        //{
+        //    Console.WriteLine(game);
+        //}
 
-            //var pagination = games.Skip(3).Take(5);
-            //foreach (var game in pagination)
-            //{
-            //    Console.WriteLine($"{game.Title} - {game.ReleaseYear}");
-            //}
+        //var pagination = games.Skip(3).Take(5);
+        //foreach (var game in pagination)
+        //{
+        //    Console.WriteLine($"{game.Title} - {game.ReleaseYear}");
+        //}
 
-            var cheapestgame = games
-                .OrderBy(g => g.Price)
-                .First();
-            Console.WriteLine($"The cheapest game is {cheapestgame.Title} with a price of {cheapestgame.Price} SEK.");
+        //var cheapestgame = games
+        //    .OrderBy(g => g.Price)
+        //    .First();
+        //Console.WriteLine($"The cheapest game is {cheapestgame.Title} with a price of {cheapestgame.Price} SEK.");
+
+        //try
+        //{
+
+        //string jsonText = File.ReadAllText("books.json");
+        //var bookList = JsonSerializer.Deserialize<List<Books>>(jsonText);
+        //foreach (var line in bookList)
+        //    {
+        //        Console.WriteLine(line);
+        //    }
+        //}
+        //catch (FileNotFoundException ex)
+        //{
+        //    Console.WriteLine("File not found: " + ex.Message);
+
+        //}
+
+
+        // reserve metod in list
+        List<string> sampleList = new List<string>
+        {
+            "Apple",
+            "Banana",
+            "Cherry",
+            "Date",
+            "Elderberry"
+        };
+
+        Console.WriteLine("Original List:");
+        foreach (var item in sampleList)
+        {
+            Console.WriteLine(item);
         }
+
+        Console.WriteLine("Thsi is reversed list:");
+        sampleList.Reverse();
+
+        foreach (var item in sampleList)
+        {
+            Console.WriteLine(item);
+        }
+
+
     }
 }
 

@@ -1,0 +1,84 @@
+{
+  "books": [
+    {
+      "id": 1,
+      "title": "Introduktion till Programmering",
+      "author": "Författare Ett",
+      "price": 29.99,
+      "genres": [ "Utbildning", "Programmering" ],
+      "published": true
+    },
+    {
+      "id": 2,
+      "title": "Mästarens C#",
+      "author": "Författare Två",
+      "price": 39.99,
+      "genres": [ "Programmering", "Avancerad" ],
+      "published": false
+    },
+    {
+      "id": 3,
+      "title": "Webb-utveckling med JavaScript",
+      "author": "Författare Tre",
+      "price": 34.99,
+      "genres": [ "Webbutveckling", "Programmering" ],
+      "published": true
+    },
+    {
+      "id": 4,
+      "title": "Python för Nybörjare",
+      "author": "Författare Fyra",
+      "price": 27.99,
+      "genres": [ "Utbildning", "Programmering" ],
+      "published": true
+    },
+    {
+      "id": 5,
+      "title": "Databaser och SQL",
+      "author": "Författare Fem",
+      "price": 42.99,
+      "genres": [ "Databaser", "Avancerad" ],
+      "published": true
+    },
+    {
+      "id": 6,
+      "title": "Algoritmer och Datastrukturer",
+      "author": "Författare Sex",
+      "price": 45.99,
+      "genres": [ "Datavetenskap", "Avancerad" ],
+      "published": false
+    },
+    {
+      "id": 7,
+      "title": "Mjukvaruutveckling i Praktiken",
+      "author": "Författare Sju",
+      "price": 38.99,
+      "genres": [ "Programmering", "Professionell" ],
+      "published": true
+    },
+    {
+      "id": 8,
+      "title": "React och Modern Frontend",
+      "author": "Författare Åtta",
+      "price": 41.99,
+      "genres": [ "Webbutveckling", "JavaScript" ],
+      "published": true
+    },
+    {
+      "id": 9,
+      "title": "Säkerhet i Webbtillämpningar",
+      "author": "Författare Nio",
+      "price": 49.99,
+      "genres": [ "Säkerhet", "Webbutveckling" ],
+      "published": false
+    },
+    {
+      "id": 10,
+      "title": "Cloud Computing med Azure",
+      "author": "Författare Tio",
+      "price": 52.99,
+      "genres": [ "Cloud", "Avancerad" ],
+      "published": true
+    }
+  ]
+}
